@@ -25,6 +25,13 @@ public class CyclistResponse {
         this.team = cyclist.getTeam().getName();
 
 
+        Long formatter = cyclist.getTimeTotal().getSeconds();
+        String string = String.format("%d:%02d:%02d", formatter/3600, (formatter%3600)/60, (formatter%60));
+
+        this.timeTotal = string;
+        this.sprintPoints = cyclist.getSprintPoints();
+        this.mountainPoints = cyclist.getMountainPoints();
     }
+
 
 }

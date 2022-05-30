@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CyclistRequest {
-    private long id;
+    private int id;
     private String name;
     private String team;
     private int age;
